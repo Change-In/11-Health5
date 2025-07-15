@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog | 11-Health</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* ─── HEADER STYLES ───────────────────────────────────────────────────── */
+
+    /* ─── HERO ───────────────────────────────────────────────────────────────── */
+    .blog-hero {
+      background: #fff; text-align: center; padding: 3rem 1rem;
+      border-bottom: 1px solid #e5eaf2; margin-bottom: 2rem;
+    }
+    .blog-hero h1 { margin: 0; font-size: 2.5rem; color: #0075c2; }
+    .blog-hero p  { margin: .5rem auto 0; color: #456172; max-width: 600px; }
+
+    /* ─── GRID OF BLOG CARDS ───────────────────────────────────────────────── */
+    .blog-list {
+      max-width: 1100px; margin: 0 auto 3rem; padding: 0 1rem;
+      display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    }
+    .blog-card {
+      background: #fff; border-radius: .6rem; overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,80,160,0.06);
+      display: flex; flex-direction: column;
+    }
+    .blog-card img {
+      width: 100%; height: auto; display: block;
+    }
+    .blog-card-content {
+      padding: 1rem 1rem 1.5rem;
+      flex: 1;
+      display: flex; flex-direction: column;
+    }
+    .blog-card-content h2 {
+      margin: 0; font-size: 1.25rem; color: #004f4f;
+    }
+    .blog-card-content p {
+      margin: .5rem 0 1rem; color: #333; flex: 1; line-height: 1.5;
+    }
+    .blog-card-content a {
+      align-self: flex-start;
+      color: #0075c2; text-decoration: none; font-weight: 600;
+      transition: color .15s;
+    }
+    .blog-card-content a:hover {
+      color: #005f9e;
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .blog-hero h1 { font-size: 2rem; }
+      .blog-hero p  { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <style>
+  @font-face {
+    font-family: 'Aptos';
+    src: url('/fonts/Aptos-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Aptos', sans-serif;
+    padding-top: 70px; /* keep content below fixed header */
+  }
+
+  .main-header {
+    background: #f9fcfe;
+    border-bottom: 1px solid #d8e6f0;
+    box-shadow: 0 2px 6px rgba(0,80,160,0.04);
+    position: fixed;
+    top: 0; left: 0; width: 100%; z-index: 99;
+    padding: 0;
+  }
+  .header-inner {
+    max-width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 15px;
+  }
+  .header-logo img {
+    height: 56px;
+    width: auto;
+    display: block;
+  }
+  .header-links-group {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+  }
+  .header-nav {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .header-nav a {
+    color: #0075c2;
+    text-decoration: none;
+    font-weight: 500;
+    padding: .18rem .45rem;
+    border-radius: .2rem;
+    font-size: 1.09rem;
+    transition: background 0.15s;
+  }
+  .header-nav a:hover {
+    background: #e6f3fa;
+  }
+  .header-login .login-btn {
+    background: #0af;
+    color: #fff;
+    padding: .32rem 1rem;
+    border-radius: .4rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 1px 8px rgba(0,175,255,0.09);
+    transition: background 0.13s;
+  }
+  .header-login .login-btn:hover {
+    background: #0075c2;
+  }
+  @media (max-width: 900px) {
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+      height: auto;
+      padding: 0 .5rem;
+    }
+    .header-links-group {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .7rem;
+    }
+    .header-nav {
+      flex-wrap: wrap;
+      gap: .7rem;
+    }
+  }
+</style>
+
+<header class="main-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="logo_5.png" alt="11-Health Logo">
+    </a>
+    <div class="header-links-group">
+      <nav class="header-nav">
+        <a href="about.html">About Us</a>
+        <a href="explore-packages.html">Our Health Programs</a>
+        <a href="for-you.html">Is 11-Health for You?</a>
+        <a href="blogs.html">Discover More</a>
+        <a href="concierge.html">Connect with Us</a>
+      </nav>
+      <div class="header-login">
+        <a href="login.html" class="login-btn">Member Log-In</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <h1>Insights &amp; Stories from 11-Health</h1>
+    <p>Explore our latest articles on preventive diagnostics, wellness strategies, and patient success stories in Costa Rica.</p>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-list">
+    <!-- Blog Post #1 -->
+    <div class="blog-card">
+    <img src="blog-image-1.png" alt="Thumbnail for The Long-Term Value of Early Detection">
+    <div class="blog-card-content">
+        <h2>The Long-Term Value of Early Detection</h2>
+        <p>You don’t need symptoms to start caring about your health.</p>
+        <a href="blog-1.html">Read More →</a>
+    </div>
+    </div>
+
+
+    <!-- Blog Post #2 -->
+    <div class="blog-card">
+    <img src="blog-image-2.png" alt="Thumbnail for Early Detection and Prevention: Safe, Simple, and Surprisingly Non-Invasive">
+    <div class="blog-card-content">
+        <h2>Early Detection and Prevention: Safe, Simple, and Surprisingly Non-Invasive</h2>
+        <p>If it sounds scary to you, you’re not alone.</p>
+        <a href="blog-2.html">Read More →</a>
+    </div>
+    </div>
+
+
+    <!-- Blog Post #3 -->
+    <div class="blog-card">
+    <img src="blog-image-3.png" alt="Thumbnail for Why Costa Rica Is One of the Best Places in the World for Medical Travel">
+    <div class="blog-card-content">
+        <h2>Why Costa Rica Is One of the Best Places in the World for Medical Travel</h2>
+        <p>Combining world-class healthcare, top diagnostics, and a vacation-like setting.</p>
+        <a href="blog-3.html">Read More →</a>
+    </div>
+    </div>
+
+
+    <!-- Blog Post #4 -->
+    <div class="blog-card">
+    <img src="blog-image-4.png" alt="Thumbnail for Functional Health: Where Lifestyle Meets Science">
+    <div class="blog-card-content">
+        <h2>Functional Health: Where Lifestyle Meets Science</h2>
+        <p>Functional health brings together medical technology and lifestyle data to personalize your care.</p>
+        <a href="blog-4.html">Read More →</a>
+    </div>
+    </div>
+
+
+    <!-- Blog Post #5 -->
+    <div class="blog-card">
+    <img src="blog-image-5.png" alt="Thumbnail for Your Body Whispers Before It Shouts — Are You Listening?">
+    <div class="blog-card-content">
+        <h2>Your Body Whispers Before It Shouts — Are You Listening?</h2>
+        <p>Don’t let symptoms be the first sign something’s wrong.</p>
+        <a href="blog-5.html">Read More →</a>
+    </div>
+    </div>
+
+
+    <!-- Blog Post #6 -->
+    <div class="blog-card">
+    <img src="blog-image-6.png" alt="Thumbnail for What Is a Coronary CT Angiogram—and Why It Could Save Your Life">
+    <div class="blog-card-content">
+        <h2>What Is a Coronary CT Angiogram—and Why It Could Save Your Life</h2>
+        <p>How a fast, non-invasive scan could reveal life-threatening heart risks before symptoms appear.</p>
+        <a href="blog-6.html">Read More →</a>
+    </div>
+    </div>
+
+
+  <!-- Blog Post #7 -->
+    <div class="blog-card">
+    <img src="blog-image-7.png" alt="Thumbnail for Stronger Together: Why Coordinating with Your Physician Enhances the 11-Health Experience">
+    <div class="blog-card-content">
+        <h2>Stronger Together: Why Coordinating with Your Physician Enhances the 11-Health Experience</h2>
+        <p>Bring your trusted care team into the conversation—and invest in diagnostics that make a difference.</p>
+        <a href="blog-7.html">Read More →</a>
+    </div>
+    </div>
+
+
+    <!-- Blog Post #8 -->
+    <div class="blog-card">
+    <img src="blog-image-8.png" alt="Thumbnail for The Preventive Power of a Full-Body MRI">
+    <div class="blog-card-content">
+        <h2>The Preventive Power of a Full-Body MRI: What this advanced scan can reveal—before symptoms ever show up</h2>
+        <p>When most people hear “MRI,” they think of injuries—discover how full-body MRI spots issues before symptoms arise.</p>
+        <a href="blog-8.html">Read More →</a>
+    </div>
+    </div>
+
+
+    <!-- Blog Post #9 -->
+    <div class="blog-card">
+    <img src="blog-image-9.png" alt="Thumbnail for Why Measuring Visceral Fat Matters…and how one scan can offer deep insight into your long-term health">
+    <div class="blog-card-content">
+        <h2>Why Measuring Visceral Fat Matters…and how one scan can offer deep insight into your long-term health</h2>
+        <p>Not all fat is created equal—and when it comes to your health, visceral fat is the kind that demands your attention.</p>
+        <a href="blog-9.html">Read More →</a>
+    </div>
+    </div>
+
+  </section>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#features">Our Approach</a>
+      <a href="#what-is-11-health">What Is 11-Health?</a>
+      <a href="#map-section">Direct Flights Map</a>
+      <a href="#contact">Contact</a>
+      <a href="#programs">Comprehensive Programs</a>
+      <a href="#about">About Us</a>
+      <a href="#who">Who This Is For</a>
+      <a href="#value">Value of Destination Health</a>
+    </div>
+    <div class="footer-powered">
+      Powered by <strong>© 11-Health, LLC</strong>
+    </div>
+    <div class="footer-disclaimer">
+      Disclaimer: Prototype only — functionality and services shown are not yet available to the public.
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background: #e6f3fa;
+  border-top: 1px solid #d6e4eb;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.footer-main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+}
+.footer-links a {
+  color: #0075c2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.2rem 0.4rem;
+  border-radius: .2rem;
+  transition: background 0.15s;
+}
+.footer-links a:hover {
+  background: #d0ecfa;
+}
+.footer-powered {
+  color: #333;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: .8rem;
+}
+.footer-disclaimer {
+  color: #555;
+  font-size: .95rem;
+  margin-top: .3rem;
+  opacity: 0.92;
+}
+@media (max-width:600px) {
+  .footer-links { gap: 0.5rem; font-size: 0.97rem;}
+  .footer-main { padding: 0; }
+}
+</style>
+
+
+</body>
+</html>

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <!-- HEADER -->
+<!-- HEADER (paste after <body>) -->
+<!-- ================= HEADER START ================= -->
+<style>
+    @font-face {
+    font-family: 'Aptos';
+    src: url('/fonts/Aptos-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Aptos', sans-serif;
+    padding-top: 70px; /* keep content below fixed header */
+  }
+
+  .main-header {
+    background: #f9fcfe;
+    border-bottom: 1px solid #d8e6f0;
+    box-shadow: 0 2px 6px rgba(0,80,160,0.04);
+    position: fixed;
+    top: 0; left: 0; width: 100%; z-index: 99;
+    padding: 0;
+  }
+  .header-inner {
+    max-width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 15px;
+  }
+  .header-logo img {
+    height: 56px;
+    width: auto;
+    display: block;
+  }
+  .header-links-group {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+  }
+  .header-nav {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .header-nav a {
+    color: #0075c2;
+    text-decoration: none;
+    font-weight: 500;
+    padding: .18rem .45rem;
+    border-radius: .2rem;
+    font-size: 1.09rem;
+    transition: background 0.15s;
+  }
+  .header-nav a:hover {
+    background: #e6f3fa;
+  }
+  .header-login .login-btn {
+    background: #0af;
+    color: #fff;
+    padding: .32rem 1rem;
+    border-radius: .4rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 1px 8px rgba(0,175,255,0.09);
+    transition: background 0.13s;
+  }
+  .header-login .login-btn:hover {
+    background: #0075c2;
+  }
+  @media (max-width: 900px) {
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+      height: auto;
+      padding: 0 .5rem;
+    }
+    .header-links-group {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .7rem;
+    }
+    .header-nav {
+      flex-wrap: wrap;
+      gap: .7rem;
+    }
+  }
+</style>
+
+<header class="main-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="logo_5.png" alt="11-Health Logo">
+    </a>
+    <div class="header-links-group">
+      <nav class="header-nav">
+        <a href="about.html">About Us</a>
+        <a href="explore-packages.html">Our Health Programs</a>
+        <a href="for-you.html">Is 11-Health for You?</a>
+        <a href="blogs.html">Discover More</a>
+        <a href="concierge.html">Connect with Us</a>
+      </nav>
+      <div class="header-login">
+        <a href="login.html" class="login-btn">Member Log-In</a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ================= HEADER END ================= -->
+
+
+<!-- HERO BANNER -->
+<header class="hero-banner">
+  <div class="content">
+    <div class="mantra">
+      A Better, Longer Life — Powered by Actionable Insight
+    </div>
+    <h1>
+      <span class="line">Prevention. Early Detection. Precision.</span><br>
+      <span class="line">Personalized Health Programs, Delivered in Paradise</span>
+    </h1>
+    <p>
+      At 11-Health, we design custom diagnostic and wellness experiences in Costa Rica that combine advanced technology, trusted physicians, and total peace of mind — so you can focus on what matters most: living well, longer.
+    </p>
+    <div class="buttons">
+      <a href="explore-packages.html" class="primary">Explore Packages</a>
+      <a href="concierge.html" class="secondary">Connect with Us</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* HERO BANNER STYLES */
+  .hero-banner {
+    position: relative;
+    min-height: 62vh;
+    background: url('./rainforest-cut.png') center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 0;
+  }
+  .hero-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    z-index: 1;
+  }
+  .hero-banner .content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 1.3rem auto 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-banner .mantra {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 0.75rem;
+  }
+  .hero-banner h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    line-height: 1.2;
+  }
+  .hero-banner h1 .line {
+    display: inline-block;
+    white-space: nowrap; /* prevent internal wrapping */
+  }
+  .hero-banner p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+  }
+  .hero-banner .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  .hero-banner .buttons a {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #0af;
+    color: #fff;
+    transition: opacity 0.2s ease;
+  }
+  .hero-banner .buttons a:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .hero-banner h1 {
+      font-size: 2rem;
+    }
+    .hero-banner p {
+      font-size: 1.1rem;
+    }
+    .hero-banner .buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    .hero-banner .buttons a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+
+
+  <!-- SNAPSHOT -->
+<section class="snapshot">
+  <p class="snapshot-intro">
+    <strong>At 11-Health we believe knowing your body is the foundation for lasting health</strong><br>
+    <span class="mission-text">
+      <em>Our mission is to empower you with the knowledge and tools to take control of your future—through advanced diagnostics, personalized care, and a positive experience from start to finish.</em>
+    </span>
+  </p>
+  <ul class="snapshot-list">
+    <li>Clinically designed programs that deliver vital insights—for you and your doctors back home—to detect conditions early, help prevent illness, and support your long-term wellness goals</li>
+    <li>Whether you’re seeking peace of mind or a personalized path to better health, our services place you at the center of your care</li>
+    <li>Delivered in Costa Rica—a global leader in high-quality, affordable healthcare—so you get maximum value from your investment in health</li>
+  </ul>
+</section>
+
+<style>
+  .snapshot {
+    max-width: 850px;
+    margin: 0 auto 2rem;
+    padding: 2rem 1rem;
+    text-align: left;
+  }
+
+  .snapshot-intro {
+    font-size: 1.5rem;      /* size for the bold line */
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .snapshot-intro strong {
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .snapshot-intro .mission-text {
+    display: block;
+    font-size: 1.2rem;      /* slightly smaller */
+    margin-top: 0.6rem;
+    font-style: italic;     /* make mission text italic */
+  }
+
+  .snapshot-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .snapshot-list li {
+    margin-bottom: 0.8rem;
+  }
+
+  @media (max-width: 700px) {
+    .snapshot-intro {
+      font-size: 1.2rem;
+    }
+    .snapshot-intro .mission-text {
+      font-size: 1rem;
+    }
+    .snapshot-list {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+
+<!-- WHAT IS 11-HEALTH? (modern cards with images) -->
+<section class="about-section" id="what-is-11-health">
+  <h2>What Is 11-Health?</h2>
+  <p class="about-intro">
+    We're your independent patient advocate—delivering truly personalized,
+    world-class diagnostics and coordinated care, right here in Costa Rica.
+  </p>
+
+  <div class="about-feature about-feature--zigzag">
+    <div class="about-feature-image">
+      <img src="pcp.png" alt="Primary Care Physician">
+    </div>
+    <div class="about-feature-text">
+      <h3>Direct Physician Coordination</h3>
+      <p>From your very first contact, we work with you and your primary care physician to understand your unique needs and goals. This ensures your care in Costa Rica is seamlessly integrated into your larger health journey.</p>
+    </div>
+  </div>
+
+  <div class="about-feature">
+    <div class="about-feature-image">
+      <img src="partners.png" alt="Trusted Partners & Technology">
+    </div>
+    <div class="about-feature-text">
+      <h3>Trusted Partners & Technology</h3>
+      <p>We partner exclusively with Costa Rica’s leading clinics and specialists, giving you access to advanced diagnostics like DEXA, MRI, and CT in state-of-the-art facilities—at a fraction of US costs.</p>
+    </div>
+  </div>
+
+  <div class="about-feature about-feature--zigzag">
+    <div class="about-feature-image">
+      <img src="concierge.png" alt="Concierge Service">
+    </div>
+    <div class="about-feature-text">
+      <h3>Full Concierge Support</h3>
+      <p>Our team arranges every detail, from personalized program design and medical coordination to smooth, stress-free travel planning—so you can focus on your health and wellness.</p>
+    </div>
+  </div>
+
+  <div class="about-feature">
+    <div class="about-feature-image">
+      <img src="wellness.png" alt="Integrated Wellness Packages">
+    </div>
+    <div class="about-feature-text">
+      <h3>Integrated Wellness Packages</h3>
+      <p>Choose from holistic bundles that empower, inform, and support your long-term well-being, giving you the clarity, confidence, and results you deserve.</p>
+    </div>
+  </div>
+
+  <div class="about-cta">
+    <a href="explore-packages.html" class="btn">Explore Programs</a>
+    <a href="concierge.html" class="btn">Connect with Us</a>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    background: #f9f9f9;
+    max-width: 1200px;
+    margin: 2rem auto;           /* reduced from 4rem */
+    padding: 2rem 1rem;          /* reduced from 4rem */
+    text-align: center;
+  }
+  .about-section h2 {
+    font-size: 2rem;
+    color: #008abf;
+    margin: 0 0 0.5rem;          /* tighten above/below */
+  }
+  .about-intro {
+    color: #333;
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;       /* reduced bottom margin */
+    font-weight: 500;
+  }
+  .about-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 3px 16px rgba(0,175,255,0.05);  /* lighter shadow */
+    margin-bottom: 2rem;         /* reduced from 3.3rem */
+    padding: 1rem 1.5rem;        /* reduced from 1.2rem 2.3rem */
+    gap: 1.5rem;                 /* reduced from 2.8rem */
+    max-width: 1000px;           /* slightly narrower */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .about-feature--zigzag {
+    flex-direction: row-reverse;
+  }
+  .about-feature-image {
+    flex: 0 0 180px;             /* narrower */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-feature-image img {
+    width: 160px;                /* smaller */
+    height: 160px;
+    object-fit: contain;
+    border-radius: 0.8rem;
+    background: #f5f8fa;
+    box-shadow: 0 1px 6px rgba(0,175,255,0.08);
+    padding: 0.5rem;
+  }
+  .about-feature-text {
+    flex: 1;
+    padding: 0;                  /* removed extra vertical padding */
+  }
+  .about-feature-text h3 {
+    color: #008abf;
+    font-size: 1.2rem;           /* slightly smaller */
+    font-weight: 700;
+    margin: 0 0 0.4rem;          /* tighten margins */
+  }
+  .about-feature-text p {
+    color: #444;
+    font-size: 1.05rem;          /* slightly smaller */
+    margin: 0;
+    line-height: 1.5;            /* tighter line-height */
+  }
+  .about-cta {
+    margin-top: 1.5rem;          /* reduced */
+  }
+  .about-cta .btn {
+    background-color: #0af;
+    color: white;
+    padding: 0.6rem 1.2rem;      /* slightly smaller */
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;          /* slightly smaller */
+    box-shadow: 0 2px 8px rgba(0,175,255,0.08);
+    margin: 0 0.5rem;
+  }
+  .about-cta .btn:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 900px) {
+    .about-section {
+      padding: 1.5rem .5rem;
+    }
+    .about-intro {
+      margin-bottom: 1rem;
+    }
+    .about-feature,
+    .about-feature--zigzag {
+      flex-direction: column !important;
+      gap: 1rem;
+      padding: 1rem .5rem;
+      text-align: center;
+    }
+    .about-feature-image img {
+      width: 120px;
+      height: 120px;
+    }
+    .about-feature-text h3 {
+      font-size: 1.1rem;
+    }
+    .about-section h2 {
+      font-size: 1.75rem;
+    }
+  }
+</style>
+
+
+<!-- MAP SECTION -->
+<style>
+  #map-section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  #map-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #222;
+  }
+
+  .map-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* Prevent wrapping on desktop */
+    flex-wrap: nowrap;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .map-image {
+    /* Takes ~60% of the row */
+    flex: 0 0 60%;
+  }
+  .map-image img {
+    max-width: 100%;         /* fills its column */
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+  }
+
+  .map-text {
+    /* Takes ~35% of the row */
+    flex: 0 0 35%;
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    color: #333;
+  }
+  .map-text h3 {
+    margin: 0 0 .75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .map-text p {
+    margin: 0 0 .75rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .map-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .map-image,
+    .map-text {
+      flex: 0 0 100%;
+    }
+  }
+</style>
+
+<section id="map-section">
+  <h2>Fly direct to Costa Rica</h2>
+  <div class="map-content">
+    <div class="map-image">
+      <img src="map.png" alt="Flight Map to Costa Rica">
+    </div>
+    <div class="map-text">
+      <h3>Why Costa Rica is the Smart Choice for Your Health Journey</h3>
+      <p>World-class healthcare should be accessible, seamless, and set in an environment that promotes wellness.</p>
+      <p>Costa Rica offers a rare combination of top-tier medical services, natural beauty, and hospitality — making it the ideal destination for your diagnostic experience.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FEATURE CARDS -->
+<section class="features" id="features">
+  <div class="features-title">
+    <h2>Our Approach to Your Health</h2>
+    <p>We blend world-class technology, holistic diagnostics, and seamless coordination to give you clarity and confidence on your health journey.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <img src="ct.png" alt="CT Scanner" />
+      <h3>Early Detection</h3>
+      <p>Gain insights to catch health issues before symptoms appear—your peace of mind starts with precise diagnostics.</p>
+    </div>
+    <div class="feature-card">
+      <img src="wellness.png" alt="Wellness Support" />
+      <h3>Long-Term Wellness</h3>
+      <p>Our personalized plans and advanced imaging support your health and vitality for years to come.</p>
+    </div>
+    <div class="feature-card">
+      <img src="lab.png" alt="Lab Diagnostics" />
+      <h3>Concierge Coordination</h3>
+      <p>Our team handles every detail, from medical scheduling to travel logistics, so you can focus on what matters: your well-being.</p>
+    </div>
+    <div class="feature-card">
+      <img src="la-paz.png" alt="La Paz" />
+      <h3>Costa Rica Excellence</h3>
+      <p>Enjoy world-class clinics and expertise in a beautiful, welcoming environment—at a fraction of US costs.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.features {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 4rem 1rem 1.5rem;
+  background: #f8fafb;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 28px rgba(0,80,160,0.04);
+}
+.features-title {
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+.features-title h2 {
+  font-size: 2rem;
+  color: #0075c2;
+  margin-bottom: .4rem;
+  font-weight: 700;
+}
+.features-title p {
+  color: #222e37;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2.5rem;
+}
+
+/* make cards square and a bit more compact */
+.feature-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 3px 20px rgba(0,80,160,0.09);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  aspect-ratio: 1 / 1;      /* ensure square shape */
+  transition: box-shadow .2s, transform .18s;
+}
+.feature-card:hover {
+  box-shadow: 0 8px 40px rgba(0,175,255,0.13), 0 2px 10px rgba(0,0,0,0.06);
+  transform: translateY(-5px) scale(1.025);
+}
+
+/* larger, square images */
+.feature-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: .5rem;
+  background: #f2f7fb;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,175,255,0.07);
+}
+
+.feature-card h3 {
+  font-size: 1.12rem;
+  color: #008abf;
+  margin: 0 0 .7rem;
+  font-weight: 600;
+  text-align: center;
+}
+.feature-card p {
+  color: #46525a;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .features { padding: 2.5rem .5rem 1.5rem; }
+  .feature-card {
+    aspect-ratio: auto;
+    padding: 1.5rem .7rem;
+  }
+}
+</style>
+
+
+
+  <!-- D3 + TopoJSON script -->
+  <script>
+    (async function(){
+      const airports = [{"code":"SJO","lat":9.998,"lon":-84.204,"status":"hub"},{"code":"LIR","lat":10.593,"lon":-85.544,"status":"hub"},{"code":"ATL","lat":33.6407,"lon":-84.4277,"status":"current"},{"code":"AUS","lat":30.1975,"lon":-97.6664,"status":"seasonal"},{"code":"BOS","lat":42.3656,"lon":-71.0096,"status":"seasonal"},{"code":"BWI","lat":39.1754,"lon":-76.6684,"status":"seasonal"},{"code":"CLT","lat":35.214,"lon":-80.9431,"status":"current"},{"code":"DEN","lat":39.8561,"lon":-104.6737,"status":"seasonal"},{"code":"DFW","lat":32.8998,"lon":-97.0403,"status":"current"},{"code":"DTW","lat":42.2162,"lon":-83.3554,"status":"seasonal"},{"code":"EWR","lat":40.6895,"lon":-74.1745,"status":"current"},{"code":"FLL","lat":26.0726,"lon":-80.1527,"status":"current"},{"code":"HOU","lat":29.6454,"lon":-95.2789,"status":"current"},{"code":"IAH","lat":29.9902,"lon":-95.3368,"status":"current"},{"code":"IAD","lat":38.9531,"lon":-77.4565,"status":"seasonal"},{"code":"JFK","lat":40.6413,"lon":-73.7781,"status":"current"},{"code":"LAS","lat":36.084,"lon":-115.1537,"status":"seasonal"},{"code":"LAX","lat":33.9416,"lon":-118.4085,"status":"current"},{"code":"MCO","lat":28.4312,"lon":-81.3081,"status":"current"},{"code":"MIA","lat":25.7959,"lon":-80.287,"status":"current"},{"code":"MSP","lat":44.882,"lon":-93.2218,"status":"seasonal"},{"code":"ORD","lat":41.9742,"lon":-87.9073,"status":"seasonal"},{"code":"PHL","lat":39.8744,"lon":-75.2424,"status":"seasonal"},{"code":"SEA","lat":47.4502,"lon":-122.3088,"status":"seasonal"},{"code":"SFO","lat":37.6213,"lon":-122.379,"status":"current"},{"code":"SLC","lat":40.7868,"lon":-111.9767,"status":"seasonal"},{"code":"TPA","lat":27.9806,"lon":-82.5344,"status":"seasonal"},{"code":"BNA","lat":36.1245,"lon":-86.6782,"status":"seasonal"},{"code":"DAL","lat":32.8471,"lon":-96.8518,"status":"seasonal"},{"code":"SAT","lat":29.5337,"lon":-98.4698,"status":"seasonal"},{"code":"YYZ","lat":43.6777,"lon":-79.6248,"status":"current"},{"code":"YUL","lat":45.4577,"lon":-73.7491,"status":"current"},{"code":"YYC","lat":51.1228,"lon":-114.0132,"status":"seasonal"},{"code":"YOW","lat":45.3221,"lon":-75.6672,"status":"seasonal"},{"code":"MEX","lat":19.4361,"lon":-99.0719,"status":"current"},{"code":"GDL","lat":20.5218,"lon":-103.3109,"status":"current"},{"code":"CUN","lat":21.0365,"lon":-86.8769,"status":"current"},{"code":"SAL","lat":13.4409,"lon":-89.0557,"status":"current"},{"code":"GUA","lat":14.5881,"lon":-90.527,"status":"current"},{"code":"PTY","lat":9.0714,"lon":-79.3834,"status":"current"},{"code":"MGA","lat":12.1415,"lon":-86.1682,"status":"current"},{"code":"BOC","lat":9.3409,"lon":-82.2508,"status":"seasonal"},{"code":"BCL","lat":10,"lon":-83.5,"status":"seasonal"},{"code":"SJU","lat":18.4394,"lon":-66.0018,"status":"current"},{"code":"SDQ","lat":18.429,"lon":-69.6689,"status":"current"},{"code":"BOG","lat":4.7016,"lon":-74.1469,"status":"current"},{"code":"MDE","lat":6.1645,"lon":-75.4231,"status":"seasonal"},{"code":"CTG","lat":10.4424,"lon":-75.513,"status":"seasonal"},{"code":"UIO","lat":-0.1251,"lon":-78.3548,"status":"current"},{"code":"GYE","lat":-2.157,"lon":-79.8836,"status":"current"},{"code":"LIM","lat":-12.0219,"lon":-77.1143,"status":"current"},{"code":"GRU","lat":-23.4356,"lon":-46.4731,"status":"seasonal"},{"code":"LGW","lat":51.1537,"lon":-0.1821,"status":"seasonal"},{"code":"MAD","lat":40.4936,"lon":-3.566,"status":"current"},{"code":"CDG","lat":49.0097,"lon":2.5479,"status":"current"},{"code":"AMS","lat":52.3105,"lon":4.7683,"status":"seasonal"},{"code":"FRA","lat":50.0379,"lon":8.5622,"status":"current"},{"code":"ZRH","lat":47.4582,"lon":8.5555,"status":"current"}];
+      const w = 900, h = 450;
+      const svg = d3.select("#map").attr("viewBox", `0 0 ${w} ${h}`);
+      const projection = d3.geoEqualEarth().rotate([85,0]).fitSize([w,h], { type: "Sphere" });
+      const geoPath = d3.geoPath().projection(projection);
+      const land = await d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson");
+      svg.append("path").datum(land).attr("d", geoPath).attr("fill", "#dfe3e6").attr("opacity", 0.6);
+      const tooltip = d3.select("body").append("div")
+        .style("position", "absolute")
+        .style("pointer-events", "none")
+        .style("padding", "4px 8px")
+        .style("background", "#fff")
+        .style("border-radius", "4px")
+        .style("font-size", ".8rem")
+        .style("box-shadow", "0 2px 4px rgba(0,0,0,.1)")
+        .style("opacity", 0);
+      svg.selectAll("circle").data(airports.sort(d => d.status === 'hub' ? -1 : 1)).join("circle")
+        .attr("cx", d => projection([d.lon, d.lat])[0])
+        .attr("cy", d => projection([d.lon, d.lat])[1])
+        .attr("r", 0)
+        .attr("fill", d => d.status === 'hub' ? 'var(--hub)' : d.status === 'current' ? 'var(--current)' : 'var(--seasonal)')
+        .attr("opacity", 0.9)
+        .on("mouseover", (e,d) => {
+          tooltip.text(`${d.code} → CR`)
+            .style("left", e.pageX + 8 + 'px')
+            .style("top", e.pageY + 8 + 'px')
+            .transition().duration(150).style("opacity", 1);
+        })
+        .on("mouseout", () => tooltip.transition().duration(300).style("opacity", 0))
+        .transition().delay((_,i) => i * 60).duration(300)
+        .attr("r", d => d.status === 'hub' ? 5 : 3);
+    })();
+  </script>
+
+<!-- ─── CALL TO ACTION BUTTONS ─────────────────────────────────── -->
+<div class="cta-buttons">
+  <a href="explore-packages.html" class="button primary">Explore Programs</a>
+  <a href="concierge.html"        class="button primary">Connect with Us</a>
+</div>
+
+<style>
+  /* center & space the buttons */
+  .cta-buttons {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  /* base styles for both CTAs */
+  .button.primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background: #0af;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    cursor: pointer;
+  }
+  .button.primary:hover {
+    background: #0075c2;
+  }
+</style>
+
+
+
+    <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#features">Our Approach</a>
+      <a href="#what-is-11-health">What Is 11-Health?</a>
+      <a href="#map-section">Direct Flights Map</a>
+      <a href="#contact">Contact</a>
+      <a href="#programs">Comprehensive Programs</a>
+      <a href="#about">About Us</a>
+      <a href="#who">Who This Is For</a>
+      <a href="#value">Value of Destination Health</a>
+    </div>
+    <div class="footer-powered">
+      Powered by <strong>© 11-Health, LLC</strong>
+    </div>
+    <div class="footer-disclaimer">
+      Disclaimer: Prototype only — functionality and services shown are not yet available to the public.
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background: #e6f3fa;
+  border-top: 1px solid #d6e4eb;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.footer-main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+}
+.footer-links a {
+  color: #0075c2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.2rem 0.4rem;
+  border-radius: .2rem;
+  transition: background 0.15s;
+}
+.footer-links a:hover {
+  background: #d0ecfa;
+}
+.footer-powered {
+  color: #333;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: .8rem;
+}
+.footer-disclaimer {
+  color: #555;
+  font-size: .95rem;
+  margin-top: .3rem;
+  opacity: 0.92;
+}
+@media (max-width:600px) {
+  .footer-links { gap: 0.5rem; font-size: 0.97rem;}
+  .footer-main { padding: 0; }
+}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+<style>
+  /* ─── FULL-BLEED HERO BANNER ─────────────────────────────────────────── */
+  .rich-hero {
+    position: relative;
+    background: url('waterfall.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  .rich-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 117, 194, 0.5);
+  }
+  .rich-hero__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    padding: 0 1rem;
+  }
+  .rich-hero__inner h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .rich-hero__inner p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+  .button.primary {
+    background: #0075c2;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .button.primary:hover {
+    background: #005f9e;
+  }
+  @media (max-width: 768px) {
+    .rich-hero {
+      height: auto;
+      padding: 4rem 1rem;
+    }
+    .rich-hero__inner h1 {
+      font-size: 2rem;
+    }
+    .rich-hero__inner p {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<section class="rich-hero">
+  <div class="rich-hero__inner">
+    <h1>Built Around What Matters Most</h1>
+    <p>Compare our Esencial, Vital &amp; Máxima programs—each designed around Metabolic, Cardiovascular, Cancer-Risk &amp; Cognitive health.</p>
+    <a href="#packages-table-container" class="button primary">Find Your Package</a>
+  </div>
+</section>
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Packages | 11-Health</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* ─── GLOBAL ─────────────────────────────────────────────────────────────── */
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f4f8fb;
+      color: #222e37;
+    }
+    
+    /* ─── RICH HERO BANNER ─────────────────────────────────────────────────── */
+    .rich-hero {
+      position: relative;
+      background: url('waterfall.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-bottom: 2rem;
+    }
+    .rich-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 117, 194, 0.5);
+    }
+    .rich-hero__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      padding: 0 1rem;
+    }
+    .rich-hero__inner h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .rich-hero__inner p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      line-height: 1.4;
+    }
+    .button.primary {
+      background: #0075c2;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .button.primary:hover {
+      background: #005f9e;
+    }
+
+    /* ─── PACKAGE DESCRIPTION CARDS ───────────────────────────────────────── */
+    .package-descriptions {
+      max-width: 1100px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    .package-card {
+      background: #eef6fa;
+      border: 2px solid #0075c2;
+      border-radius: 0.6rem;
+      padding: 1.5rem;
+    }
+    .package-card h2 {
+      margin-top: 0;
+      color: #004f4f;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    .package-card h3 {
+      margin: 0.5rem 0;
+      color: #0075c2;
+      font-weight: 500;
+    }
+    .package-card p {
+      line-height: 1.5;
+      margin: 0.75rem 0;
+    }
+    .package-card p:last-child {
+      font-style: italic;
+      color: #244c5a;
+    }
+
+    /* ─── ORIGINAL HERO ─────────────────────────────────────────────────────── */
+    .explore-hero {
+      background: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom: 1px solid #e5eaf2;
+      margin-bottom: 2rem;
+    }
+    .explore-hero h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #0075c2;
+      font-weight: 700;
+    }
+    .explore-hero p {
+      margin: 1rem auto 0;
+      font-size: 1.125rem;
+      color: #456172;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    /* ─── TABLE & ACCORDION ───────────────────────────────────────────────── */
+    .package-table-section {
+      margin: 0 auto 3rem;
+      max-width: 1100px;
+      background: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .package-table { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1rem;
+      table-layout: fixed;
+      background: #fff;
+    }
+    thead th {
+      position: sticky; top: 0;
+      background: #0075c2; color: #fff;
+      font-weight: 600; padding: 1rem .5rem;
+      text-align: center; border-bottom: 1px solid #e5eaf2;
+      z-index: 2;
+    }
+    thead th:nth-child(1),
+    thead th:nth-child(2) {
+      text-align: left; padding-left: 1rem;
+    }
+    table tr th:nth-child(6),
+    table tr td:nth-child(6) { display: none; }
+    th, td {
+      padding: .75rem .5rem;
+      border-bottom: 1px solid #e5eaf2;
+      vertical-align: middle; color: #222e37;
+    }
+    .pillar-title {
+      font-weight: 600;
+      background: #eef6fa;
+      color: #004f4f;
+      border-right: 1px solid #e5eaf2;
+    }
+    tr.collapsible {
+      background: #f0f8ff;
+      color: #004f4f;
+      cursor: pointer;
+      position: relative;
+      font-weight: 500;
+    }
+    tr.collapsible td:nth-child(2)::after {
+      content: '▸';
+      float: right;
+      margin-right: 1rem;
+      transform: rotate(0deg);
+      transition: transform .2s ease;
+      color: #888;
+    }
+    tr.collapsible.open td:nth-child(2)::after {
+      transform: rotate(90deg);
+      color: #0075c2;
+    }
+    tr.collapsible.open {
+      background: #dceffc;
+    }
+    tr.collapsible-content {
+  display: none;
+    }
+
+    /* ─── STATUS ICONS ─────────────────────────────────────────────────────── */
+    .check {
+      color: #24b47e;
+      font-size: 1.25em;
+      text-align: center;
+    }
+    .exam-status {
+      text-align: center;
+      font-size: 1.25em;
+    }
+    .exam-status.all .status-icon { color: #24b47e; }
+    .exam-status.some .status-icon { color: #FFB300; }
+    .exam-status.none .status-icon { color: #ccc; }
+
+    /* ─── BUTTON ───────────────────────────────────────────────────────────── */
+    .button.primary,
+    .book-btn {
+      display: inline-block;
+      padding: .75rem 1.5rem;
+      border-radius: .5rem;
+      background: #0075c2;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s;
+      border: none;
+      cursor: pointer;
+    }
+    .button.primary:hover,
+    .book-btn:hover {
+      background: #005f9e;
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────────────────── */
+    @media (max-width: 800px) {
+      thead th { font-size: .85rem; padding: .75rem .3rem; }
+      th, td { font-size: .85rem; padding: .5rem .3rem; }
+      .button.primary,
+      .book-btn { font-size: .85rem; padding: .4rem 1rem; }
+      .package-descriptions { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+
+<body>
+
+<!-- ================= HEADER START ================= -->
+<style>
+    @font-face {
+    font-family: 'Aptos';
+    src: url('/fonts/Aptos-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Aptos', sans-serif;
+    padding-top: 70px; /* keep content below fixed header */
+  }
+
+  .main-header {
+    background: #f9fcfe;
+    border-bottom: 1px solid #d8e6f0;
+    box-shadow: 0 2px 6px rgba(0,80,160,0.04);
+    position: fixed;
+    top: 0; left: 0; width: 100%; z-index: 99;
+    padding: 0;
+  }
+  .header-inner {
+    max-width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 15px;
+  }
+  .header-logo img {
+    height: 56px;
+    width: auto;
+    display: block;
+  }
+  .header-links-group {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+  }
+  .header-nav {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .header-nav a {
+    color: #0075c2;
+    text-decoration: none;
+    font-weight: 500;
+    padding: .18rem .45rem;
+    border-radius: .2rem;
+    font-size: 1.09rem;
+    transition: background 0.15s;
+  }
+  .header-nav a:hover {
+    background: #e6f3fa;
+  }
+  .header-login .login-btn {
+    background: #0af;
+    color: #fff;
+    padding: .32rem 1rem;
+    border-radius: .4rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 1px 8px rgba(0,175,255,0.09);
+    transition: background 0.13s;
+  }
+  .header-login .login-btn:hover {
+    background: #0075c2;
+  }
+  @media (max-width: 900px) {
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+      height: auto;
+      padding: 0 .5rem;
+    }
+    .header-links-group {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .7rem;
+    }
+    .header-nav {
+      flex-wrap: wrap;
+      gap: .7rem;
+    }
+  }
+</style>
+
+<header class="main-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="logo_5.png" alt="11-Health Logo">
+    </a>
+    <div class="header-links-group">
+      <nav class="header-nav">
+        <a href="about.html">About Us</a>
+        <a href="explore-packages.html">Our Health Programs</a>
+        <a href="for-you.html">Is 11-Health for You?</a>
+        <a href="blogs.html">Discover More</a>
+        <a href="concierge.html">Connect with Us</a>
+      </nav>
+      <div class="header-login">
+        <a href="login.html" class="login-btn">Member Log-In</a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ================= HEADER END ================= -->
+
+<!-- 2) NEW SINGLE-LINE HERO -->
+<section class="pillar-hero" style="background:#fff; padding:1.5rem; text-align:center; border-bottom:1px solid #e5eaf2;">
+  <!-- narrowed container to match your card width -->
+  <div style="max-width:900px; margin:0 auto; padding:0 1rem;">
+    <p style="
+        margin: 0;
+        font-size: 1.125rem;
+        color: #244c5a;
+        line-height: 1.6;
+      ">
+      Each of our predesigned programs is built around the health pillars that will make the greatest difference:
+      <strong>Metabolic Health, Cardiovascular Health, Cancer Risk,</strong> and <strong>Brain &amp; Cognitive Function.</strong>
+      No matter what you choose, your testing will deliver meaningful, actionable insight.
+    </p>
+  </div>
+</section>
+
+
+<!-- INSERT THIS RIGHT AFTER THE HERO, BEFORE THE TABLE CONTAINER -->
+<section class="package-descriptions" style="max-width:1100px; margin:2rem auto; display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+
+  <!-- ESENCIAL -->
+  <div class="package-card" style="background:#eef6fa; border-radius:0.6rem; padding:1.5rem; text-align:center;">
+    <h2 style="
+      display:block;
+      width:100%;
+      margin:0 0 1rem;
+      background:#0075c2;
+      color:#fff;
+      padding:.75rem 0;
+      border-radius:.4rem;
+      font-size:1.4rem;
+      font-weight:700;
+    ">ESENCIAL</h2>
+    <h3 style="
+      margin:0 auto 1rem;
+      font-size:1.125rem;
+      font-weight:700;
+      color:#004f4f;
+    ">Foundational Health Clarity in a Single Visit</h3>
+    <p style="margin:0; line-height:1.5; color:#222e37; text-align:left;">
+      <strong>ESENCIAL</strong> goes far beyond the baseline and most executive health programs. It delivers high-impact diagnostics in one streamlined program. Designed to uncover risks before symptoms appear, this is a true foundation for better health decisions.
+    </p>
+    <p style="margin-top:1rem; font-style:italic; color:#46525a; text-align:left;">
+      It’s preventive care, redefined—and all in one coordinated experience.
+    </p>
+  </div>
+
+  <!-- VITAL -->
+  <div class="package-card" style="background:#eef6fa; border-radius:0.6rem; padding:1.5rem; text-align:center;">
+    <h2 style="
+      display:block;
+      width:100%;
+      margin:0 0 1rem;
+      background:#008abf;
+      color:#fff;
+      padding:.75rem 0;
+      border-radius:.4rem;
+      font-size:1.4rem;
+      font-weight:700;
+    ">VITAL</h2>
+    <h3 style="
+      margin:0 auto 1rem;
+      font-size:1.125rem;
+      font-weight:700;
+      color:#004f4f;
+    ">Deeper Diagnostics, Broader Insight</h3>
+    <p style="margin:0; line-height:1.5; color:#222e37; text-align:left;">
+      <strong>VITAL</strong> adds to ESENCIAL by including more advanced diagnostics to deepen the actionable insight you will receive. We’ll help decode what’s happening beneath the surface. Take your health strategy to the next level with more precise control, monitoring, and personalization.
+    </p>
+    <p style="margin-top:1rem; font-style:italic; color:#46525a; text-align:left;">
+      Step deeper into your health journey—because what you learn today shapes your life tomorrow.
+    </p>
+  </div>
+
+  <!-- MÁXIMA -->
+  <div class="package-card" style="background:#eef6fa; border-radius:0.6rem; padding:1.5rem; text-align:center;">
+    <h2 style="
+      display:block;
+      width:100%;
+      margin:0 0 1rem;
+      background:#00a982;
+      color:#fff;
+      padding:.75rem 0;
+      border-radius:.4rem;
+      font-size:1.4rem;
+      font-weight:700;
+    ">MÁXIMA</h2>
+    <h3 style="
+      margin:0 auto 1rem;
+      font-size:1.125rem;
+      font-weight:700;
+      color:#004f4f;
+    ">Next-Level Insight, Powered by Precision Tools</h3>
+    <p style="margin:0; line-height:1.5; color:#222e37; text-align:left;">
+      <strong>MÁXIMA</strong> is our most comprehensive and forward-looking program—built for those who want to see further, act earlier, and personalize everything. It elevates your experience with cutting-edge diagnostics that include AI and genetic profiling. MÁXIMA is not just about early detection—it’s about advanced prevention and long-term optimization.
+    </p>
+    <p style="margin-top:1rem; font-style:italic; color:#46525a; text-align:left;">
+      For those who want the deepest insight and the power to prevent long before symptoms appear.
+    </p>
+  </div>
+
+  <!-- A LA CARTE -->
+  <div class="package-card" style="background:#eef6fa; border-radius:0.6rem; padding:1.5rem; text-align:center;">
+    <h2 style="
+      display:block;
+      width:100%;
+      margin:0 0 1rem;
+      background:#244c5a;
+      color:#fff;
+      padding:.75rem 0;
+      border-radius:.4rem;
+      font-size:1.4rem;
+      font-weight:700;
+    ">A LA CARTE</h2>
+    <h3 style="
+      margin:0 auto 1rem;
+      font-size:1.125rem;
+      font-weight:700;
+      color:#004f4f;
+    ">Customize Your Own Program</h3>
+    <p style="margin:0; line-height:1.5; color:#222e37; text-align:left;">
+      Build your own experience. <strong>A La Carte</strong> allows you to choose exactly what to test for—whether you’re filling gaps from recent exams, working with your at-home physician to enhance your health goals, or targeting specific concerns. We’ll coordinate with you and your care team to design the right personalized diagnostic path for you.
+    </p>
+    <p style="margin-top:1rem; font-style:italic; color:#46525a; text-align:left;">
+      A flexible, physician-aligned approach for those who know what they need and want.
+    </p>
+  </div>
+
+</section>
+
+<!-- centered Connect with Us button -->
+<div style="text-align:center; margin:2rem 0;">
+  <a href="concierge.html" style="
+      display:inline-block;
+      background-color:#0af;
+      color:#fff;
+      padding:0.75rem 1.5rem;
+      border-radius:0.5rem;
+      font-weight:bold;
+      text-decoration:none;
+      font-size:1rem;
+    ">
+    Connect with Us
+  </a>
+</div>
+
+
+<!-- END PACKAGE DESCRIPTIONS -->
+
+<section class="explore-hero">
+    <h1>Explore Our Preventive Health Packages</h1>
+    <p>Click any category below to expand its detailed tests.</p>
+</section>
+
+  <!-- then comes your existing table container -->
+<!-- ─── FULLY-OPEN, STICKY-HEADER TABLE ─────────────────────────────────── -->
+<section class="package-table-section">
+  <div id="packages-table-container"></div>
+</section>
+
+<script>
+  fetch('packages-table.html')
+    .then(res => res.text())
+    .then(html => {
+      // 1) Inject the locked table
+      document.getElementById('packages-table-container').innerHTML = html;
+
+      // 2) Show every detail row
+      document
+        .querySelectorAll('.package-table-section tr.collapsible-content')
+        .forEach(r => r.style.display = 'table-row');
+
+      // 3) Mark all summary rows “open” (in case you style .open)
+      document
+        .querySelectorAll('.package-table-section tr.collapsible')
+        .forEach(r => r.classList.add('open'));
+
+      // 4) Strip out any click handlers by replacing each <tr> with a clone
+      document
+        .querySelectorAll('.package-table-section tr.collapsible')
+        .forEach(r => {
+          const clone = r.cloneNode(true);
+          r.parentNode.replaceChild(clone, r);
+        });
+
+      // 5) Turn the real .package-table wrapper into a scroll container
+      const tbl = document.querySelector('#packages-table-container .package-table');
+      if (tbl) {
+        tbl.style.maxHeight = '60vh';
+        tbl.style.overflowY  = 'auto';
+      }
+    })
+    .catch(console.error);
+</script>
+
+<style>
+  /* make the injected .package-table scrollable */
+  .package-table-section .package-table {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  /* pin the header row as you scroll */
+  .package-table-section .package-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #0075c2;
+    color: #fff;
+  }
+
+  /* center checkmarks & dashes */
+  .package-table-section td.check,
+  .package-table-section td.dash {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* left-align first two columns */
+  .package-table-section td.pillar-title,
+  .package-table-section td:nth-child(2) {
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  /* remove the little arrow markers */
+  .package-table-section tr.collapsible td:nth-child(2)::after {
+    content: none !important;
+  }
+</style>
+
+
+<!--Footer-->
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#features">Our Approach</a>
+      <a href="#what-is-11-health">What Is 11-Health?</a>
+      <a href="#map-section">Direct Flights Map</a>
+      <a href="#contact">Contact</a>
+      <a href="#programs">Comprehensive Programs</a>
+      <a href="#about">About Us</a>
+      <a href="#who">Who This Is For</a>
+      <a href="#value">Value of Destination Health</a>
+    </div>
+    <div class="footer-powered">
+      Powered by <strong>© 11-Health, LLC</strong>
+    </div>
+    <div class="footer-disclaimer">
+      Disclaimer: Prototype only — functionality and services shown are not yet available to the public.
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background: #e6f3fa;
+  border-top: 1px solid #d6e4eb;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.footer-main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+}
+.footer-links a {
+  color: #0075c2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.2rem 0.4rem;
+  border-radius: .2rem;
+  transition: background 0.15s;
+}
+.footer-links a:hover {
+  background: #d0ecfa;
+}
+.footer-powered {
+  color: #333;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: .8rem;
+}
+.footer-disclaimer {
+  color: #555;
+  font-size: .95rem;
+  margin-top: .3rem;
+  opacity: 0.92;
+}
+@media (max-width:600px) {
+  .footer-links { gap: 0.5rem; font-size: 0.97rem;}
+  .footer-main { padding: 0; }
+}
+</style>
+
+</body>
+</html>
